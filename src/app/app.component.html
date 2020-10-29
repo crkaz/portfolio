@@ -1,1 +1,5 @@
-<mat-toolbar color=primary></mat-toolbar>
+<div [class.dark-theme]="darkThemeActive">
+  <mat-toolbar color=primary>
+    <button (click)="toggleDarkTheme()"></button>
+  </mat-toolbar>
+</div>
