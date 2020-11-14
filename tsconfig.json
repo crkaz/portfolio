@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -15,6 +14,30 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "my-cms": [
+        "dist/my-cms/my-cms",
+        "dist/my-cms"
+      ],
+      "blog": [
+        "dist/blog/blog",
+        "dist/blog",
+        "dist/blog/blog",
+        "dist/blog"
+      ],
+      "cms": [
+        "dist/cms/cms",
+        "dist/cms"
+      ],
+      "design": [
+        "dist/design/design",
+        "dist/design"
+      ],
+      "login": [
+        "dist/login/login",
+        "dist/login"
+      ]
+    }
   }
 }
