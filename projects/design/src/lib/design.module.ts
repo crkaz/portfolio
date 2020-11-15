@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
-import { DesignComponent } from './design.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 
 @NgModule({
-  declarations: [DesignComponent, ToolbarComponent],
+  declarations: [ToolbarComponent],
   imports: [
     MatToolbarModule,
   ],
-  exports: [DesignComponent, ToolbarComponent]
+  exports: [ToolbarComponent]
 })
 export class DesignModule { }
