@@ -200,46 +200,6 @@
         }
       }
     },
-    "design": {
-      "projectType": "library",
-      "root": "projects/design",
-      "sourceRoot": "projects/design/src",
-      "prefix": "crkaz",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "projects/design/tsconfig.lib.json",
-            "project": "projects/design/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/design/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/design/src/test.ts",
-            "tsConfig": "projects/design/tsconfig.spec.json",
-            "karmaConfig": "projects/design/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/design/tsconfig.lib.json",
-              "projects/design/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "login": {
       "projectType": "library",
       "root": "projects/login",
@@ -366,6 +326,7 @@
               "projects/portfolio/src/assets"
             ],
             "styles": [
+              "projects/portfolio/src/custom-theme.scss",
               "projects/portfolio/src/styles.css"
             ],
             "scripts": []
@@ -461,6 +422,47 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-portfolio"
+    },
+    "design": {
+      "projectType": "library",
+      "root": "projects/design",
+      "sourceRoot": "projects/design/src",
+      "prefix": "crkaz",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/design/tsconfig.lib.json",
+            "project": "projects/design/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/design/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/design/src/test.ts",
+            "tsConfig": "projects/design/tsconfig.spec.json",
+            "karmaConfig": "projects/design/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/design/tsconfig.lib.json",
+              "projects/design/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "portfolio"
 }
